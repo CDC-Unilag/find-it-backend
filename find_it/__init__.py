@@ -17,7 +17,7 @@ def create_app(config_environment):
 
     db.init_app(app)
 
-    from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint)
+    from .v1 import v1 as v1_blueprint
+    app.register_blueprint(v1_blueprint)
 
     return app

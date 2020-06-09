@@ -8,7 +8,7 @@ from find_it.models import User
 
 load_dotenv('dev.env')
 
-app = create_app(os.environ.get('FlASK_ENV'))
+app = create_app(os.environ.get('FLASK_ENV'))
 migrate = Migrate(app, db)
 
 
