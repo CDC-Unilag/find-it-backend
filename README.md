@@ -39,3 +39,10 @@ linux or mac:
 
 view demo on ```localhost:5000/```
 
+
+# Running Tests
+
+```bash
+cd find-it-backend/
+python -m unittest
+```

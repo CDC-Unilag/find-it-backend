@@ -1,6 +1,4 @@
 
-from flask import jsonify
-
 
 class Helpers:
     @staticmethod
@@ -22,6 +20,9 @@ class Helpers:
         responses = {
             200: 'OK',
             201: 'created',
+            400: 'bad request',
+            401: 'unauthorized',
+            403: 'forbidden',
             404: 'not found',
         }
         response_obj = {
@@ -32,4 +33,4 @@ class Helpers:
             response_obj.update(data=data)
         elif error_detail:
             response_obj.update(error_detail=error_detail)
-        return jsonify(response_obj), code
+        return response_obj, code
